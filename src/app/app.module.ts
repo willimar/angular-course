@@ -20,7 +20,11 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 import { ShoppingCartService } from './restaurant-detail/shoping-cart/shopping-cart.service';
 import { OrderComponent } from './order/order.component';
 import { InputComponent } from './shared/input/input.component';
-import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
+import { DynamicFieldDirective } from './dynamic-form/components/dynamic-field/dynamic-field.directive';
+import { FormButtonComponent } from './dynamic-form/components/form-button/form-button.component';
+import { FormInputComponent } from './dynamic-form/components/form-input/form-input.component';
+import { FormSelectComponent } from './dynamic-form/components/form-select/form-select.component';
+import { DynamicFormComponent } from './dynamic-form/containers/dynamic-form/dynamic-form.component';
 
 
 @NgModule({
@@ -38,7 +42,11 @@ import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
     ReviewsComponent,
     OrderComponent,
     InputComponent,
-    DynamicFormModule
+    DynamicFieldDirective,
+    DynamicFormComponent,
+    FormButtonComponent,
+    FormInputComponent,
+    FormSelectComponent
   ],
   imports: [
     BrowserModule,
