@@ -20,11 +20,9 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 import { ShoppingCartService } from './restaurant-detail/shoping-cart/shopping-cart.service';
 import { OrderComponent } from './order/order.component';
 import { InputComponent } from './shared/input/input.component';
-import { DynamicFieldDirective } from './dynamic-form/components/dynamic-field/dynamic-field.directive';
-import { FormButtonComponent } from './dynamic-form/components/form-button/form-button.component';
-import { FormInputComponent } from './dynamic-form/components/form-input/form-input.component';
-import { FormSelectComponent } from './dynamic-form/components/form-select/form-select.component';
-import { DynamicFormComponent } from './dynamic-form/containers/dynamic-form/dynamic-form.component';
+import { RadioComponent } from './shared/radio/radio.component';
+import { OrderItemComponent } from './order/order-item/order-item.component';
+import { OrderService } from './order/order.service';
 
 
 @NgModule({
@@ -42,11 +40,8 @@ import { DynamicFormComponent } from './dynamic-form/containers/dynamic-form/dyn
     ReviewsComponent,
     OrderComponent,
     InputComponent,
-    DynamicFieldDirective,
-    DynamicFormComponent,
-    FormButtonComponent,
-    FormInputComponent,
-    FormSelectComponent
+    RadioComponent,
+    OrderItemComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +50,7 @@ import { DynamicFormComponent } from './dynamic-form/containers/dynamic-form/dyn
     ReactiveFormsModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [RestaurantService, ShoppingCartService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [RestaurantService, ShoppingCartService, OrderService, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
