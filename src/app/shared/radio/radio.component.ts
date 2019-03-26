@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, forwardRef } from '@angular/core';
 import { RadioOption } from './radio-option.model';
-import { ControlValueAccessor,NG_VALUE_ACCESSOR } from '@angular/forms';
+import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'mt-radio',
@@ -38,10 +38,10 @@ export class RadioComponent implements OnInit, ControlValueAccessor {
     this.onChange = fn;
   }
   registerOnTouched(fn: any): void {
-    throw new Error("Method not implemented.");
+    //throw new Error("Method not implemented.");
   }
   setDisabledState?(isDisabled: boolean): void {
-    throw new Error("Method not implemented.");
+    //throw new Error("Method not implemented.");
   }
 
 }
